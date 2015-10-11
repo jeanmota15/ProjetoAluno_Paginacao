@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ProjetoAluno.Dominio.ViewModel.InscricaoDataGrupo>
+
+
+
+@{
+    ViewBag.Title = "Estatísticas do Corpo de Alunos";
+}
+
+<h2>Estatísticas do Corpo de Alunos</h2>
+
+<table>
+    <tr>
+        <th>
+            Data Inscrição
+        </th>
+        <th>
+            Alunos
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.InscricaoData
+            </td>
+            <td>
+                @item.contadorAlunos
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,74 @@
+﻿
+
+@using PagedList.Mvc;
+@model PagedList.IPagedList<ProjetoAluno.Dominio.Aluno>
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Aluno</h2>
+
+<p>
+    @Html.ActionLink("Novo Cadastro", "Cadastrar")
+</p>
+
+@using (@Html.BeginForm("Index", "Aluno", FormMethod.Get))
+{
+    <p>
+        Busca por Nome e Sobrenome: @Html.TextBox("pesquisa")
+        <input type="submit" value="Buscar" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Nome)*@
+        Nome
+
+        </th>
+        <th>
+        @Html.ActionLink("Sobrenome", "Index", new { ordem = ViewBag.Sobrenome})
+        
+        </th>
+        <th>
+        @Html.ActionLink("Data de Inscrição", "Index", new{ ordem = ViewBag.Data })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInscricao)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }) |
+                @Html.ActionLink("Excluir", "Excluir", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, numeroPagina => Url.Action ("Index", new { numeroPagina, ordem = ViewBag.Ordem, pesquisa = ViewBag.Pesquisa}))
+
+
+
+
+
+
+
+

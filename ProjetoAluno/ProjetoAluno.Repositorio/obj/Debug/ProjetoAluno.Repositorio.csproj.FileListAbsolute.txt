@@ -1,0 +1,7 @@
+c:\users\jean mota\documents\visual studio 2013\Projects\ProjetoAluno\ProjetoAluno.Repositorio\bin\Debug\ProjetoAluno.Repositorio.dll
+c:\users\jean mota\documents\visual studio 2013\Projects\ProjetoAluno\ProjetoAluno.Repositorio\bin\Debug\ProjetoAluno.Repositorio.pdb
+c:\users\jean mota\documents\visual studio 2013\Projects\ProjetoAluno\ProjetoAluno.Repositorio\bin\Debug\ProjetoAluno.Dominio.dll
+c:\users\jean mota\documents\visual studio 2013\Projects\ProjetoAluno\ProjetoAluno.Repositorio\bin\Debug\ProjetoAluno.Dominio.pdb
+c:\users\jean mota\documents\visual studio 2013\Projects\ProjetoAluno\ProjetoAluno.Repositorio\obj\Debug\ProjetoAluno.Repositorio.csprojResolveAssemblyReference.cache
+c:\users\jean mota\documents\visual studio 2013\Projects\ProjetoAluno\ProjetoAluno.Repositorio\obj\Debug\ProjetoAluno.Repositorio.dll
+c:\users\jean mota\documents\visual studio 2013\Projects\ProjetoAluno\ProjetoAluno.Repositorio\obj\Debug\ProjetoAluno.Repositorio.pdb
